@@ -1,0 +1,2509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visao.interfaceController">
+  <tabs>
+    <Tab fx:id="manga" text="mangá">
+         <content>
+            <TabPane prefHeight="368.0" prefWidth="600.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="cadastrar_manga" text="cadastrar">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="340.0" prefWidth="593.0">
+                           <children>
+                              <GridPane prefHeight="400.0" prefWidth="542.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="99.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="251.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="BLACK" strokeType="INSIDE" width="542.0" StackPane.alignment="TOP_CENTER">
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#171717" />
+                                                      <Stop color="#282828" offset="0.06896551724137931" />
+                                                      <Stop color="#9610c6" offset="0.436781609195402" />
+                                                      <Stop color="#9610c6" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro" StackPane.alignment="TOP_CENTER">
+                                             <StackPane.margin>
+                                                <Insets top="30.0" />
+                                             </StackPane.margin>
+                                             <font>
+                                                <Font name="System Bold Italic" size="36.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="50.0" stroke="BLACK" strokeType="INSIDE" width="542.0" StackPane.alignment="BOTTOM_CENTER">
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#222020" />
+                                                      <Stop color="#1b1a1a" offset="0.034482758620689655" />
+                                                      <Stop color="#9610c6" offset="0.6743295019157086" />
+                                                      <Stop color="#9610c6" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="projeto de Poo - aluno: Lucas Barros Pelinca da Costa " StackPane.alignment="BOTTOM_CENTER">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="15.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="stkcadastro_m2" prefHeight="150.0" prefWidth="200.0" visible="false" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0" />
+                                          <ImageView fitHeight="250.0" fitWidth="250.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" StackPane.alignment="BOTTOM_LEFT">
+                                             <image>
+                                                <Image url="@../../../../../Downloads/vegetto%20chibi.png" />
+                                             </image>
+                                             <StackPane.margin>
+                                                <Insets left="100.0" />
+                                             </StackPane.margin>
+                                          </ImageView>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro realizado com sucesso!!!" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="18.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Button fx:id="bntoutrocadastro_m" mnemonicParsing="false" onAction="#outro_cadastro" text="fazer outro cadastro" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="stkcadastro_m1" prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0" />
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="digite:" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="10.0" top="5.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="código do mangá" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" top="20.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Text fx:id="errocad_m" fill="#ff700b" strokeType="OUTSIDE" strokeWidth="0.0" text="error" visible="false" wrappingWidth="83.8984375" StackPane.alignment="TOP_RIGHT">
+                                             <StackPane.margin>
+                                                <Insets right="50.0" top="70.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="tfcad_codm" maxWidth="150.0" StackPane.alignment="TOP_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="55.0" top="40.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="nome do mangá" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" top="60.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="tfcad_nomem" maxWidth="150.0" StackPane.alignment="TOP_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="55.0" top="80.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="nome do autor" StackPane.alignment="CENTER_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="25.0" left="20.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="tfcad_nome_autor" maxWidth="150.0" StackPane.alignment="CENTER_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="55.0" top="15.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="ano de publicação" StackPane.alignment="CENTER_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" top="55.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="tfcad_data_pub" maxWidth="150.0" StackPane.alignment="CENTER_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="55.0" top="100.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="distribuidora" StackPane.alignment="CENTER_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" top="140.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="tfcad_distribuidora" maxWidth="150.0" StackPane.alignment="BOTTOM_LEFT">
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" left="55.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../../Downloads/goku.png" />
+                                             </image>
+                                             <StackPane.margin>
+                                                <Insets bottom="40.0" left="80.0" />
+                                             </StackPane.margin>
+                                          </ImageView>
+                                          <Button fx:id="bntfimcad_m" mnemonicParsing="false" onAction="#cadastrar" text="finalizar cadastro" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </GridPane>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab fx:id="buscar_manga" onSelectionChanged="#excluir_limpar_manga" text="busc/alt/exc">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane prefHeight="400.0" prefWidth="542.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="99.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="251.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <StackPane fx:id="stkalt_m" prefHeight="150.0" prefWidth="200.0" visible="false" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0" />
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="alterar:" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="18.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Button fx:id="bntfimalt_m" mnemonicParsing="false" onAction="#fim_alteração_manga" text="finalizar a alteração" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="nome do manga" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="25.0" top="25.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="altnome_manga" maxWidth="150.0" StackPane.alignment="TOP_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="55.0" top="45.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="nome do autor" StackPane.alignment="CENTER_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="90.0" left="25.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="altnome_autor" maxWidth="150.0" StackPane.alignment="CENTER_LEFT">
+                                             <StackPane.margin>
+                                                <Insets bottom="40.0" left="55.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="distribuidora" StackPane.alignment="CENTER_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="25.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="ano de publicação" StackPane.alignment="BOTTOM_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="70.0" left="25.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="altdistribuidora" maxWidth="150.0" StackPane.alignment="CENTER_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="55.0" top="45.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <TextField fx:id="altdata_pub" maxWidth="150.0" StackPane.alignment="BOTTOM_LEFT">
+                                             <StackPane.margin>
+                                                <Insets bottom="45.0" left="55.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="BLACK" strokeType="INSIDE" width="542.0" StackPane.alignment="TOP_CENTER">
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#171717" />
+                                                      <Stop color="#282828" offset="0.06896551724137931" />
+                                                      <Stop color="#9610c6" offset="0.436781609195402" />
+                                                      <Stop color="#9610c6" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="busc/alt/exc" StackPane.alignment="TOP_CENTER">
+                                             <StackPane.margin>
+                                                <Insets top="30.0" />
+                                             </StackPane.margin>
+                                             <font>
+                                                <Font name="System Bold Italic" size="36.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="stkbae_m1" prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0" />
+                                          <ImageView fitHeight="200.0" fitWidth="250.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" StackPane.alignment="BOTTOM_CENTER">
+                                             <image>
+                                                <Image url="@../../../../../Downloads/asunachib.png" />
+                                             </image>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" left="70.0" />
+                                             </StackPane.margin>
+                                          </ImageView>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="digite:" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="10.0" top="5.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="código do mangá" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" top="20.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="tfbusc_cod_m" maxWidth="150.0" StackPane.alignment="TOP_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="55.0" top="40.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <Text fx:id="errobusc_m" fill="#ff700b" strokeType="OUTSIDE" strokeWidth="0.0" text="error" visible="false" wrappingWidth="83.8984375" StackPane.alignment="TOP_RIGHT">
+                                             <StackPane.margin>
+                                                <Insets right="50.0" top="50.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Button fx:id="bntbusc_m" mnemonicParsing="false" onAction="#buscar_manga" text="Buscar" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <Button fx:id="bntexc_m" mnemonicParsing="false" onAction="#excluir_manga" text="excluir" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="100.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <Button fx:id="bntalt_m" mnemonicParsing="false" onAction="#alterar_manga" text="alterar" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="60.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <Text fx:id="excfim_m" fill="#ff700b" strokeType="OUTSIDE" strokeWidth="0.0" text="exclusão realizada!!!" textAlignment="JUSTIFY" visible="false" wrappingWidth="134.8984375" StackPane.alignment="BOTTOM_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="20.0" />
+                                             </StackPane.margin>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="50.0" stroke="BLACK" strokeType="INSIDE" width="542.0" StackPane.alignment="BOTTOM_CENTER">
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#222020" />
+                                                      <Stop color="#1b1a1a" offset="0.034482758620689655" />
+                                                      <Stop color="#9610c6" offset="0.6743295019157086" />
+                                                      <Stop color="#9610c6" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="projeto de Poo - aluno: Lucas Barros Pelinca da Costa " StackPane.alignment="BOTTOM_CENTER">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="15.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="stkbusca_m" prefHeight="150.0" prefWidth="200.0" visible="false" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0" />
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="busca realizada com sucesso!!!" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="18.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Button fx:id="voltarbusc_m" mnemonicParsing="false" onAction="#voltarbusca_manga" text="voltar" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <TableView fx:id="tabv_m1" maxHeight="150.0" maxWidth="475.0" minHeight="150.0" prefHeight="150.0" prefWidth="385.0" StackPane.alignment="CENTER">
+                                            <columns>
+                                                <TableColumn fx:id="tabc_cod_m1" prefWidth="96.0" text="codigo_manga" />
+                                              <TableColumn fx:id="tabc_nome_m1" prefWidth="96.0" text="nome_manga" />
+                                              <TableColumn fx:id="tabc_nome_autor1" prefWidth="81.0" text="nome_autor" />
+                                                <TableColumn fx:id="tabc_distribuidora1" prefWidth="92.0" text="distribuidora" />
+                                                <TableColumn fx:id="tabc_data_pub1" prefWidth="112.0" text="ano_publicação" />
+                                            </columns>
+                                             <StackPane.margin>
+                                                <Insets bottom="50.0" right="30.0" />
+                                             </StackPane.margin>
+                                          </TableView>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </GridPane>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="relatorio_manga" onSelectionChanged="#relatorio_manga_apagar" text="relatorio">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane prefHeight="400.0" prefWidth="542.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="99.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="251.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="BLACK" strokeType="INSIDE" width="542.0" StackPane.alignment="TOP_CENTER">
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#171717" />
+                                                      <Stop color="#282828" offset="0.06896551724137931" />
+                                                      <Stop color="#9610c6" offset="0.436781609195402" />
+                                                      <Stop color="#9610c6" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="Relatorio" StackPane.alignment="TOP_CENTER">
+                                             <StackPane.margin>
+                                                <Insets top="30.0" />
+                                             </StackPane.margin>
+                                             <font>
+                                                <Font name="System Bold Italic" size="36.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="stkrelatorio_m2" prefHeight="150.0" prefWidth="200.0" visible="false" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0" />
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="relatorio de mangá:" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="10.0" top="5.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TableView fx:id="tabv_m2" maxHeight="200.0" maxWidth="440.0" prefHeight="200.0" prefWidth="376.0" StackPane.alignment="CENTER_LEFT">
+                                            <columns>
+                                              <TableColumn fx:id="tabc_cod_m2" prefWidth="94.0" text="codigo_manga" />
+                                              <TableColumn fx:id="tabc_nome_m2" text="nome_manga" />
+                                                <TableColumn fx:id="tabc_nome_autor2" text="nome_autor" />
+                                                <TableColumn fx:id="tabc_distribuidora2" prefWidth="83.0" text="distribuidora" />
+                                                <TableColumn fx:id="tabc_data_pub2" prefWidth="102.0" text="ano_publicação" />
+                                            </columns>
+                                             <StackPane.margin>
+                                                <Insets left="10.0" top="10.0" />
+                                             </StackPane.margin>
+                                          </TableView>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="50.0" stroke="BLACK" strokeType="INSIDE" width="542.0" StackPane.alignment="BOTTOM_CENTER">
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#222020" />
+                                                      <Stop color="#1b1a1a" offset="0.034482758620689655" />
+                                                      <Stop color="#9610c6" offset="0.6743295019157086" />
+                                                      <Stop color="#9610c6" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="projeto de Poo - aluno: Lucas Barros Pelinca da Costa " StackPane.alignment="BOTTOM_CENTER">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="15.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="stkrelatorio_m1" prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0" />
+                                          <ImageView fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="BOTTOM_LEFT">
+                                             <image>
+                                                <Image url="@../../../../../Downloads/luffy.png" />
+                                             </image>
+                                             <StackPane.margin>
+                                                <Insets left="50.0" />
+                                             </StackPane.margin>
+                                          </ImageView>
+                                          <Button fx:id="bntrelatorio_m" mnemonicParsing="false" onAction="#relatorio_manga" text="atualizar relatório" textFill="#ff5b09" StackPane.alignment="CENTER_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </content>
+    </Tab>
+      <Tab fx:id="anime" text="anime">
+         <content>
+            <TabPane prefHeight="368.0" prefWidth="600.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab fx:id="cadastrar_manga1" text="cadastrar">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="340.0" prefWidth="593.0">
+                           <children>
+                              <GridPane prefHeight="400.0" prefWidth="542.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="99.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="251.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="BLACK" strokeType="INSIDE" width="542.0" StackPane.alignment="TOP_CENTER">
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#171717" />
+                                                      <Stop color="#282828" offset="0.06896551724137931" />
+                                                      <Stop color="#9610c6" offset="0.436781609195402" />
+                                                      <Stop color="#9610c6" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro" StackPane.alignment="TOP_CENTER">
+                                             <StackPane.margin>
+                                                <Insets top="30.0" />
+                                             </StackPane.margin>
+                                             <font>
+                                                <Font name="System Bold Italic" size="36.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="stkcadastro_a1" prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0" />
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="digite:" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="10.0" top="5.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="código do anime" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" top="20.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="tfcad_coda" maxWidth="150.0" StackPane.alignment="TOP_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="55.0" top="40.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="nome do anime" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" top="60.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="tfcad_nomea" maxWidth="150.0" StackPane.alignment="TOP_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="55.0" top="80.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="genero" StackPane.alignment="CENTER_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="25.0" left="20.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="tfcad_genero" maxWidth="150.0" StackPane.alignment="CENTER_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="55.0" top="15.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="núm de episódios" StackPane.alignment="CENTER_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" top="55.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="tfcad_n_eps" maxWidth="150.0" StackPane.alignment="CENTER_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="55.0" top="100.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <Text fx:id="errocad_a1" fill="#ff700b" strokeType="OUTSIDE" strokeWidth="0.0" text="error" visible="false" wrappingWidth="83.8984375" StackPane.alignment="TOP_RIGHT">
+                                             <StackPane.margin>
+                                                <Insets right="50.0" top="70.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../../Downloads/goku.png" />
+                                             </image>
+                                             <StackPane.margin>
+                                                <Insets bottom="40.0" left="80.0" />
+                                             </StackPane.margin>
+                                          </ImageView>
+                                          <Button fx:id="bntfimcad_a" mnemonicParsing="false" onAction="#cadastrar_anime" text="finalizar cadastro" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="50.0" stroke="BLACK" strokeType="INSIDE" width="542.0" StackPane.alignment="BOTTOM_CENTER">
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#222020" />
+                                                      <Stop color="#1b1a1a" offset="0.034482758620689655" />
+                                                      <Stop color="#9610c6" offset="0.6743295019157086" />
+                                                      <Stop color="#9610c6" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="projeto de Poo - aluno: Lucas Barros Pelinca da Costa " StackPane.alignment="BOTTOM_CENTER">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="15.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="stkcadastro_a2" prefHeight="150.0" prefWidth="200.0" visible="false" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0" />
+                                          <ImageView fitHeight="250.0" fitWidth="250.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" StackPane.alignment="BOTTOM_LEFT">
+                                             <image>
+                                                <Image url="@../../../../../Downloads/vegetto%20chibi.png" />
+                                             </image>
+                                             <StackPane.margin>
+                                                <Insets left="100.0" />
+                                             </StackPane.margin>
+                                          </ImageView>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro realizado com sucesso!!!" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="18.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Button fx:id="bntoutrocadastro_a" mnemonicParsing="false" onAction="#outro_cadastro_anime" text="fazer outro cadastro" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="btn_bae_a" onSelectionChanged="#excluir_voltar_anime" text="busc/alt/exc">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane prefHeight="400.0" prefWidth="542.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="99.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="251.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <StackPane fx:id="stkalt_m1" prefHeight="150.0" prefWidth="200.0" visible="false" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0" />
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="alterar:" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="18.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Button fx:id="bntfimalt_a" mnemonicParsing="false" onAction="#fim_alteração_anime" text="finalizar a alteração" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="nome do anime" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="25.0" top="25.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="genero" StackPane.alignment="CENTER_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="90.0" left="25.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="altgenero" maxWidth="150.0" StackPane.alignment="CENTER_LEFT">
+                                             <StackPane.margin>
+                                                <Insets bottom="40.0" left="55.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="núm de episódios" StackPane.alignment="CENTER_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="25.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="altn_eps" maxWidth="150.0" StackPane.alignment="CENTER_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="55.0" top="45.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <TextField fx:id="altnome_anime" maxWidth="150.0" StackPane.alignment="TOP_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="55.0" top="45.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="BLACK" strokeType="INSIDE" width="542.0" StackPane.alignment="TOP_CENTER">
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#171717" />
+                                                      <Stop color="#282828" offset="0.06896551724137931" />
+                                                      <Stop color="#9610c6" offset="0.436781609195402" />
+                                                      <Stop color="#9610c6" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="busc/alt/exc" StackPane.alignment="TOP_CENTER">
+                                             <StackPane.margin>
+                                                <Insets top="30.0" />
+                                             </StackPane.margin>
+                                             <font>
+                                                <Font name="System Bold Italic" size="36.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="stkbae_a" prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0" />
+                                          <ImageView fitHeight="200.0" fitWidth="250.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" StackPane.alignment="BOTTOM_CENTER">
+                                             <image>
+                                                <Image url="@../../../../../Downloads/asunachib.png" />
+                                             </image>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" left="70.0" />
+                                             </StackPane.margin>
+                                          </ImageView>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="digite:" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="10.0" top="5.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="código do anime" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" top="20.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="tfbaecod_a" maxWidth="150.0" StackPane.alignment="TOP_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="55.0" top="40.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <Text fx:id="errobusc_a" fill="#ff700b" strokeType="OUTSIDE" strokeWidth="0.0" text="error" visible="false" wrappingWidth="83.8984375" StackPane.alignment="TOP_RIGHT">
+                                             <StackPane.margin>
+                                                <Insets right="50.0" top="50.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Button fx:id="bntbusc_a" mnemonicParsing="false" onAction="#buscar_anime" text="Buscar" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <Button fx:id="bntexc_a" mnemonicParsing="false" onAction="#excluir_anime" text="excluir" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="100.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <Button fx:id="bntalt_a" mnemonicParsing="false" onAction="#alterar_anime" text="alterar" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="60.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <Text fx:id="excfim_a" fill="#ff700b" strokeType="OUTSIDE" strokeWidth="0.0" text="exclusão realizada!!!" textAlignment="JUSTIFY" visible="false" wrappingWidth="134.8984375" StackPane.alignment="BOTTOM_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="20.0" />
+                                             </StackPane.margin>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="50.0" stroke="BLACK" strokeType="INSIDE" width="542.0" StackPane.alignment="BOTTOM_CENTER">
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#222020" />
+                                                      <Stop color="#1b1a1a" offset="0.034482758620689655" />
+                                                      <Stop color="#9610c6" offset="0.6743295019157086" />
+                                                      <Stop color="#9610c6" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="projeto de Poo - aluno: Lucas Barros Pelinca da Costa " StackPane.alignment="BOTTOM_CENTER">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="15.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="stkbusc_a" prefHeight="150.0" prefWidth="200.0" visible="false" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0" />
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="busca realizada com sucesso!!!" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="18.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Button fx:id="voltabusc_a" mnemonicParsing="false" onAction="#volta_busca_anime" text="voltar" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <TableView fx:id="tabv_a1" maxHeight="150.0" maxWidth="485.0" minHeight="150.0" prefHeight="150.0" prefWidth="385.0" StackPane.alignment="CENTER">
+                                             <columns>
+                                                <TableColumn fx:id="tabc_cod_a1" prefWidth="96.0" text="codigo_anime" />
+                                                <TableColumn fx:id="tabc_nome_a1" prefWidth="96.0" text="nome_anime" />
+                                                <TableColumn fx:id="tabc_genero1" prefWidth="81.0" text="genero" />
+                                                <TableColumn fx:id="tabc_n_eps1" prefWidth="92.0" text="n_eps" />
+                                             </columns>
+                                             <StackPane.margin>
+                                                <Insets bottom="40.0" right="30.0" />
+                                             </StackPane.margin>
+                                          </TableView>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="relatorio_manga1" onSelectionChanged="#relatorio_anime_apagar" text="relatorio">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane prefHeight="400.0" prefWidth="542.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="99.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="251.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="BLACK" strokeType="INSIDE" width="542.0" StackPane.alignment="TOP_CENTER">
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#171717" />
+                                                      <Stop color="#282828" offset="0.06896551724137931" />
+                                                      <Stop color="#9610c6" offset="0.436781609195402" />
+                                                      <Stop color="#9610c6" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="Relatorio" StackPane.alignment="TOP_CENTER">
+                                             <StackPane.margin>
+                                                <Insets top="30.0" />
+                                             </StackPane.margin>
+                                             <font>
+                                                <Font name="System Bold Italic" size="36.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="stkrelatorio_a2" prefHeight="150.0" prefWidth="200.0" visible="false" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0" />
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="relatorio de mangá:" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="10.0" top="5.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TableView fx:id="tabv_a2" maxHeight="200.0" maxWidth="440.0" prefHeight="200.0" prefWidth="376.0" StackPane.alignment="CENTER_LEFT">
+                                             <columns>
+                                                <TableColumn fx:id="tabc_cod_a2" prefWidth="94.0" text="codigo_anime" />
+                                                <TableColumn fx:id="tabc_nome_a2" text="nome_anime" />
+                                                <TableColumn fx:id="tabc_genero2" text="genero" />
+                                                <TableColumn fx:id="tabc_n_eps2" prefWidth="83.0" text="n_eps" />
+                                             </columns>
+                                             <StackPane.margin>
+                                                <Insets left="10.0" top="10.0" />
+                                             </StackPane.margin>
+                                          </TableView>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="50.0" stroke="BLACK" strokeType="INSIDE" width="542.0" StackPane.alignment="BOTTOM_CENTER">
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#222020" />
+                                                      <Stop color="#1b1a1a" offset="0.034482758620689655" />
+                                                      <Stop color="#9610c6" offset="0.6743295019157086" />
+                                                      <Stop color="#9610c6" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="projeto de Poo - aluno: Lucas Barros Pelinca da Costa " StackPane.alignment="BOTTOM_CENTER">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="15.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="stkrelatorio_a1" prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0" />
+                                          <ImageView fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="BOTTOM_LEFT">
+                                             <image>
+                                                <Image url="@../../../../../Downloads/luffy.png" />
+                                             </image>
+                                             <StackPane.margin>
+                                                <Insets left="50.0" />
+                                             </StackPane.margin>
+                                          </ImageView>
+                                          <Button fx:id="bntrelatorio_a" mnemonicParsing="false" onAction="#relatorio_anime" text="atualizar relatório" textFill="#ff5b09" StackPane.alignment="CENTER_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </content>
+      </Tab>
+      <Tab fx:id="plataforma" text="plataforma">
+         <content>
+            <TabPane prefHeight="368.0" prefWidth="600.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab fx:id="cadastrar_plataforma" text="cadastrar">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="340.0" prefWidth="593.0">
+                           <children>
+                              <GridPane prefHeight="400.0" prefWidth="542.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="99.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="251.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="BLACK" strokeType="INSIDE" width="542.0" StackPane.alignment="TOP_CENTER">
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#171717" />
+                                                      <Stop color="#282828" offset="0.06896551724137931" />
+                                                      <Stop color="#9610c6" offset="0.436781609195402" />
+                                                      <Stop color="#9610c6" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro" StackPane.alignment="TOP_CENTER">
+                                             <StackPane.margin>
+                                                <Insets top="30.0" />
+                                             </StackPane.margin>
+                                             <font>
+                                                <Font name="System Bold Italic" size="36.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="stkcadastro_p1" prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0">
+                                             <StackPane.margin>
+                                                <Insets />
+                                             </StackPane.margin>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="digite:" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="10.0" top="5.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="código da plataforma" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" top="20.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="tfcad_codp" maxWidth="150.0" StackPane.alignment="TOP_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="55.0" top="40.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <Text fx:id="errocad_p" fill="#ff700b" strokeType="OUTSIDE" strokeWidth="0.0" text="error" visible="false" wrappingWidth="83.8984375" StackPane.alignment="TOP_RIGHT">
+                                             <StackPane.margin>
+                                                <Insets right="50.0" top="70.0" />
+                                             </StackPane.margin></Text>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="nome da plataforma" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" top="70.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="tfcad_nome_p" maxWidth="150.0" StackPane.alignment="TOP_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="55.0" top="90.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="núm de assinantes" StackPane.alignment="CENTER_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="25.0" left="20.0" top="20.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="tfcad_n_assinantes" maxWidth="150.0" StackPane.alignment="CENTER_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="55.0" top="35.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="núm de animes" StackPane.alignment="CENTER_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" top="85.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="tfcad_n_animes" maxWidth="150.0" StackPane.alignment="CENTER_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="55.0" top="130.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../../Downloads/goku.png" />
+                                             </image>
+                                             <StackPane.margin>
+                                                <Insets bottom="40.0" left="80.0" />
+                                             </StackPane.margin>
+                                          </ImageView>
+                                          <Button fx:id="bntfimcad_p" mnemonicParsing="false" onAction="#cadastro_plataforma" text="finalizar cadastro" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="50.0" stroke="BLACK" strokeType="INSIDE" width="542.0" StackPane.alignment="BOTTOM_CENTER">
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#222020" />
+                                                      <Stop color="#1b1a1a" offset="0.034482758620689655" />
+                                                      <Stop color="#9610c6" offset="0.6743295019157086" />
+                                                      <Stop color="#9610c6" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="projeto de Poo - aluno: Lucas Barros Pelinca da Costa " StackPane.alignment="BOTTOM_CENTER">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="15.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="stkcadastro_p2" prefHeight="150.0" prefWidth="200.0" visible="false" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0" />
+                                          <ImageView fitHeight="250.0" fitWidth="250.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" StackPane.alignment="BOTTOM_LEFT">
+                                             <image>
+                                                <Image url="@../../../../../Downloads/vegetto%20chibi.png" />
+                                             </image>
+                                             <StackPane.margin>
+                                                <Insets left="100.0" />
+                                             </StackPane.margin>
+                                          </ImageView>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro realizado com sucesso!!!" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="18.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Button fx:id="bntoutrocadastro_p" mnemonicParsing="false" onAction="#outro_cadastro_plataforma" text="fazer outro cadastro" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="bae_plataforma" onSelectionChanged="#excluir_limpar_plataforma" text="busc/alt/exc">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane prefHeight="400.0" prefWidth="542.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="99.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="251.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <StackPane fx:id="stkalt_p" prefHeight="150.0" prefWidth="200.0" visible="false" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0" />
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="alterar:" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="18.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Button fx:id="bntfimalt_p" mnemonicParsing="false" onAction="#fim_alteração_plataforma" text="finalizar a alteração" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="nome da plataforma" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="25.0" top="25.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="núm de assinantes" StackPane.alignment="CENTER_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="90.0" left="25.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="altassinantes_p" maxWidth="150.0" StackPane.alignment="CENTER_LEFT">
+                                             <StackPane.margin>
+                                                <Insets bottom="40.0" left="55.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="núm de animes" StackPane.alignment="CENTER_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="25.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="altn_animes_p" maxWidth="150.0" StackPane.alignment="CENTER_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="55.0" top="45.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <TextField fx:id="altnome_plat" maxWidth="150.0" StackPane.alignment="TOP_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="55.0" top="45.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="BLACK" strokeType="INSIDE" width="542.0" StackPane.alignment="TOP_CENTER">
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#171717" />
+                                                      <Stop color="#282828" offset="0.06896551724137931" />
+                                                      <Stop color="#9610c6" offset="0.436781609195402" />
+                                                      <Stop color="#9610c6" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="busc/alt/exc" StackPane.alignment="TOP_CENTER">
+                                             <StackPane.margin>
+                                                <Insets top="30.0" />
+                                             </StackPane.margin>
+                                             <font>
+                                                <Font name="System Bold Italic" size="36.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="stkbae_p" prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0" />
+                                          <ImageView fitHeight="200.0" fitWidth="250.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" StackPane.alignment="BOTTOM_CENTER">
+                                             <image>
+                                                <Image url="@../../../../../Downloads/asunachib.png" />
+                                             </image>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" left="70.0" />
+                                             </StackPane.margin>
+                                          </ImageView>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="digite:" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="10.0" top="5.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="código do plataforma" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" top="20.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="tfbae_cod_p" maxWidth="150.0" StackPane.alignment="TOP_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="55.0" top="40.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <Text fx:id="errobusc_p" fill="#ff700b" strokeType="OUTSIDE" strokeWidth="0.0" text="error" visible="false" wrappingWidth="83.8984375" StackPane.alignment="TOP_RIGHT">
+                                             <StackPane.margin>
+                                                <Insets right="50.0" top="50.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Text fx:id="excfim_p" fill="#ff700b" strokeType="OUTSIDE" strokeWidth="0.0" text="exclusão realizada!!!" textAlignment="JUSTIFY" visible="false" wrappingWidth="134.8984375" StackPane.alignment="BOTTOM_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="20.0" />
+                                             </StackPane.margin>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Button fx:id="bntbusc_p" mnemonicParsing="false" onAction="#buscar_plat" text="Buscar" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <Button fx:id="bntalt_p" mnemonicParsing="false" onAction="#alterar_plat" text="alterar" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="60.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <Button fx:id="bntexc_p" mnemonicParsing="false" onAction="#excluir_plat" text="excluir" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="100.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="50.0" stroke="BLACK" strokeType="INSIDE" width="542.0" StackPane.alignment="BOTTOM_CENTER">
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#222020" />
+                                                      <Stop color="#1b1a1a" offset="0.034482758620689655" />
+                                                      <Stop color="#9610c6" offset="0.6743295019157086" />
+                                                      <Stop color="#9610c6" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="projeto de Poo - aluno: Lucas Barros Pelinca da Costa " StackPane.alignment="BOTTOM_CENTER">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="15.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="stkbuscar_p" prefHeight="150.0" prefWidth="200.0" visible="false" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0" />
+                                          <TableView fx:id="tabv_plat" maxHeight="167.0" maxWidth="280.0" minHeight="167.0" prefHeight="167.0" prefWidth="542.0" StackPane.alignment="TOP_LEFT">
+                                             <columns>
+                                                <TableColumn fx:id="tabc_cod_p1" prefWidth="66.0" text="cod_plat" />
+                                                <TableColumn fx:id="tabc_nome_p1" prefWidth="75.0" text="nome_plat" />
+                                                <TableColumn fx:id="tabc_assinantes_p1" prefWidth="73.0" text="assinantes" />
+                                                <TableColumn fx:id="tabc_n_animes_p1" prefWidth="69.0" text="n_animes" />
+                                             </columns>
+                                             <StackPane.margin>
+                                                <Insets top="30.0" />
+                                             </StackPane.margin>
+                                          </TableView>
+                                          <TableView fx:id="tabv_ap1" maxHeight="167.0" maxWidth="260.0" minHeight="167.0" prefHeight="167.0" prefWidth="200.0" StackPane.alignment="TOP_RIGHT">
+                                            <columns>
+                                                <TableColumn fx:id="tabc_cod_ap1" prefWidth="56.0" text="cod_ani" />
+                                                <TableColumn fx:id="tabc_nome_ap1" prefWidth="63.0" text="nome_ani" />
+                                                <TableColumn fx:id="tabc_genero_ap1" prefWidth="58.0" text="gênero" />
+                                                <TableColumn fx:id="tabc_n_eps_ap1" prefWidth="81.0" text="n_eps" />
+                                            </columns>
+                                             <StackPane.margin>
+                                                <Insets top="30.0" />
+                                             </StackPane.margin>
+                                          </TableView>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="busca realizada com sucesso!!!" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="18.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Button fx:id="voltabusc_p" mnemonicParsing="false" onAction="#voltar_busca_plat" text="voltar" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="relatorio_plataforma" onSelectionChanged="#relatorio_plataforma_apagar" text="relatorio">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane prefHeight="400.0" prefWidth="542.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="99.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="251.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="BLACK" strokeType="INSIDE" width="542.0" StackPane.alignment="TOP_CENTER">
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#171717" />
+                                                      <Stop color="#282828" offset="0.06896551724137931" />
+                                                      <Stop color="#9610c6" offset="0.436781609195402" />
+                                                      <Stop color="#9610c6" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="Relatorio" StackPane.alignment="TOP_CENTER">
+                                             <StackPane.margin>
+                                                <Insets top="30.0" />
+                                             </StackPane.margin>
+                                             <font>
+                                                <Font name="System Bold Italic" size="36.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="stkrelatorio_p2" prefHeight="150.0" prefWidth="200.0" visible="false" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0" />
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="relatorio de plataforma:" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="10.0" top="5.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TableView fx:id="tabv_p2" maxHeight="200.0" maxWidth="265.0" prefHeight="200.0" prefWidth="265.0" StackPane.alignment="CENTER">
+                                             <columns>
+                                                <TableColumn fx:id="tabc_cod_p2" prefWidth="65.0" text="cod_plat" />
+                                                <TableColumn fx:id="tabc_nome_p2" prefWidth="68.0" text="nome_plat" />
+                                                <TableColumn fx:id="tabc_assinantes_p2" prefWidth="67.0" text="assinantes" />
+                                                <TableColumn fx:id="tabc_n_animes_p2" prefWidth="65.0" text="n_animes" />
+                                             </columns>
+                                             <StackPane.margin>
+                                                <Insets left="10.0" top="10.0" />
+                                             </StackPane.margin>
+                                          </TableView>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="50.0" stroke="BLACK" strokeType="INSIDE" width="542.0" StackPane.alignment="BOTTOM_CENTER">
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#222020" />
+                                                      <Stop color="#1b1a1a" offset="0.034482758620689655" />
+                                                      <Stop color="#9610c6" offset="0.6743295019157086" />
+                                                      <Stop color="#9610c6" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="projeto de Poo - aluno: Lucas Barros Pelinca da Costa " StackPane.alignment="BOTTOM_CENTER">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="15.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="stkrelatorio_p1" prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0" />
+                                          <ImageView fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="BOTTOM_LEFT">
+                                             <image>
+                                                <Image url="@../../../../../Downloads/luffy.png" />
+                                             </image>
+                                             <StackPane.margin>
+                                                <Insets left="50.0" />
+                                             </StackPane.margin>
+                                          </ImageView>
+                                          <Button fx:id="bntrelatorio_p" mnemonicParsing="false" onAction="#relatorio_plat" text="atualizar relatório" textFill="#ff5b09" StackPane.alignment="CENTER_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="cadastrar_dis" text="cadastrar distribuição">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="340.0" prefWidth="593.0">
+                           <children>
+                              <GridPane prefHeight="400.0" prefWidth="542.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="99.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="251.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="BLACK" strokeType="INSIDE" width="542.0" StackPane.alignment="TOP_CENTER">
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#171717" />
+                                                      <Stop color="#282828" offset="0.06896551724137931" />
+                                                      <Stop color="#9610c6" offset="0.436781609195402" />
+                                                      <Stop color="#9610c6" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro" StackPane.alignment="TOP_CENTER">
+                                             <StackPane.margin>
+                                                <Insets top="30.0" />
+                                             </StackPane.margin>
+                                             <font>
+                                                <Font name="System Bold Italic" size="36.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="stkcadastro_d" prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0">
+                                             <StackPane.margin>
+                                                <Insets />
+                                             </StackPane.margin>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="digite:" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="10.0" top="5.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="código da distribuição" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" top="20.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="tfcad_cod_distribuição" maxWidth="150.0" StackPane.alignment="TOP_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="55.0" top="40.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <Text fx:id="errocad_p1" fill="#ff700b" strokeType="OUTSIDE" strokeWidth="0.0" text="error" visible="false" wrappingWidth="83.8984375" StackPane.alignment="TOP_RIGHT">
+                                             <StackPane.margin>
+                                                <Insets right="50.0" top="70.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="codigo da plataforma" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" top="70.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="tfcad_cod_platdis" maxWidth="150.0" StackPane.alignment="TOP_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="55.0" top="90.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="codigo de animes" StackPane.alignment="CENTER_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="25.0" left="20.0" top="20.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="tfcad_cod_animedis" maxWidth="150.0" StackPane.alignment="CENTER_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="55.0" top="35.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../../Downloads/goku.png" />
+                                             </image>
+                                             <StackPane.margin>
+                                                <Insets bottom="40.0" left="80.0" />
+                                             </StackPane.margin>
+                                          </ImageView>
+                                          <Button fx:id="bntfimcad_dist" mnemonicParsing="false" onAction="#cadastro_distribuição" text="finalizar cadastro" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="50.0" stroke="BLACK" strokeType="INSIDE" width="542.0" StackPane.alignment="BOTTOM_CENTER">
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#222020" />
+                                                      <Stop color="#1b1a1a" offset="0.034482758620689655" />
+                                                      <Stop color="#9610c6" offset="0.6743295019157086" />
+                                                      <Stop color="#9610c6" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="projeto de Poo - aluno: Lucas Barros Pelinca da Costa " StackPane.alignment="BOTTOM_CENTER">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="15.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="stkcadastro_distribu" prefHeight="150.0" prefWidth="200.0" visible="false" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0" />
+                                          <ImageView fitHeight="250.0" fitWidth="250.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" StackPane.alignment="BOTTOM_LEFT">
+                                             <image>
+                                                <Image url="@../../../../../Downloads/vegetto%20chibi.png" />
+                                             </image>
+                                             <StackPane.margin>
+                                                <Insets left="100.0" />
+                                             </StackPane.margin>
+                                          </ImageView>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro realizado com sucesso!!!" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="18.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Button fx:id="bntoutrocadastro_p1" mnemonicParsing="false" onAction="#outro_cadastro_distribuição" text="fazer outro cadastro" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </content>
+      </Tab>
+      <Tab text="sistema">
+         <content>
+            <TabPane prefHeight="368.0" prefWidth="600.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab fx:id="cadastrar_manga2" text="cadastrar">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="340.0" prefWidth="593.0">
+                           <children>
+                              <GridPane prefHeight="400.0" prefWidth="542.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="99.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="251.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="BLACK" strokeType="INSIDE" width="542.0" StackPane.alignment="TOP_CENTER">
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#171717" />
+                                                      <Stop color="#282828" offset="0.06896551724137931" />
+                                                      <Stop color="#9610c6" offset="0.436781609195402" />
+                                                      <Stop color="#9610c6" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro" StackPane.alignment="TOP_CENTER">
+                                             <StackPane.margin>
+                                                <Insets top="30.0" />
+                                             </StackPane.margin>
+                                             <font>
+                                                <Font name="System Bold Italic" size="36.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="50.0" stroke="BLACK" strokeType="INSIDE" width="542.0" StackPane.alignment="BOTTOM_CENTER">
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#222020" />
+                                                      <Stop color="#1b1a1a" offset="0.034482758620689655" />
+                                                      <Stop color="#9610c6" offset="0.6743295019157086" />
+                                                      <Stop color="#9610c6" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="projeto de Poo - aluno: Lucas Barros Pelinca da Costa " StackPane.alignment="BOTTOM_CENTER">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="15.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="stkoutro_cadastro_s" prefHeight="150.0" prefWidth="200.0" visible="false" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0" />
+                                          <ImageView fitHeight="250.0" fitWidth="250.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" StackPane.alignment="BOTTOM_LEFT">
+                                             <image>
+                                                <Image url="@../../../../../Downloads/vegetto%20chibi.png" />
+                                             </image>
+                                             <StackPane.margin>
+                                                <Insets left="100.0" />
+                                             </StackPane.margin>
+                                          </ImageView>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro realizado com sucesso!!!" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="18.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Button fx:id="bntoutrocadastro_s" mnemonicParsing="false" onAction="#outro_cadastro_sistema" text="fazer outro cadastro" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="stkcadastro_s" prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0" />
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="digite:" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="10.0" top="5.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="código do sistema" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" top="20.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="tfcad_cods" maxWidth="150.0" StackPane.alignment="TOP_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="55.0" top="40.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../../Downloads/goku.png" />
+                                             </image>
+                                             <StackPane.margin>
+                                                <Insets bottom="40.0" left="80.0" />
+                                             </StackPane.margin>
+                                          </ImageView>
+                                          <Text fx:id="errocad_s" fill="#ff700b" strokeType="OUTSIDE" strokeWidth="0.0" text="error" visible="false" wrappingWidth="83.8984375" StackPane.alignment="TOP_RIGHT">
+                                             <StackPane.margin>
+                                                <Insets right="50.0" top="70.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Button fx:id="bntfimcad_s" mnemonicParsing="false" onAction="#cadastrar_sistema" text="finalizar cadastro" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <TextField fx:id="tfcad_nome_adm" maxWidth="150.0" StackPane.alignment="CENTER_LEFT">
+                                             <StackPane.margin>
+                                                <Insets bottom="35.0" left="55.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="código do sistema" StackPane.alignment="CENTER_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="80.0" left="20.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="buscar_sistema" onSelectionChanged="#excluir_voltar_sistema" text="busc/alt/exc">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane prefHeight="400.0" prefWidth="542.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="99.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="251.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <StackPane fx:id="stkalt_s" prefHeight="150.0" prefWidth="200.0" visible="false" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0" />
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="alterar:" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="18.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Button fx:id="bntfimalt_s" mnemonicParsing="false" onAction="#fim_alteração_sistema" text="finalizar a alteração" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="nome do adm" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="25.0" top="25.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="altnome_adm" maxWidth="150.0" StackPane.alignment="TOP_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="55.0" top="45.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="BLACK" strokeType="INSIDE" width="542.0" StackPane.alignment="TOP_CENTER">
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#171717" />
+                                                      <Stop color="#282828" offset="0.06896551724137931" />
+                                                      <Stop color="#9610c6" offset="0.436781609195402" />
+                                                      <Stop color="#9610c6" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="busc/alt/exc" StackPane.alignment="TOP_CENTER">
+                                             <StackPane.margin>
+                                                <Insets top="30.0" />
+                                             </StackPane.margin>
+                                             <font>
+                                                <Font name="System Bold Italic" size="36.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="stkbae_s" prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0" />
+                                          <ImageView fitHeight="200.0" fitWidth="250.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" StackPane.alignment="BOTTOM_CENTER">
+                                             <image>
+                                                <Image url="@../../../../../Downloads/asunachib.png" />
+                                             </image>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" left="70.0" />
+                                             </StackPane.margin>
+                                          </ImageView>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="digite:" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="10.0" top="5.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="código do sistema" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" top="20.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="tfbae_cod_s" maxWidth="150.0" StackPane.alignment="TOP_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="55.0" top="40.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <Text fx:id="errobusc_s" fill="#ff700b" strokeType="OUTSIDE" strokeWidth="0.0" text="error" visible="false" wrappingWidth="83.8984375" StackPane.alignment="TOP_RIGHT">
+                                             <StackPane.margin>
+                                                <Insets right="50.0" top="50.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Button fx:id="bntbusc_s" mnemonicParsing="false" onAction="#buscar_sistema" text="Buscar" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <Button fx:id="bntexc_s" mnemonicParsing="false" onAction="#excluir_sistema" text="excluir" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="100.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <Button fx:id="bntalt_s" mnemonicParsing="false" onAction="#alterar_sistema" text="alterar" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="60.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <Text fx:id="excfim_s" fill="#ff700b" strokeType="OUTSIDE" strokeWidth="0.0" text="exclusão realizada!!!" textAlignment="JUSTIFY" visible="false" wrappingWidth="134.8984375" StackPane.alignment="BOTTOM_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="20.0" />
+                                             </StackPane.margin>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="50.0" stroke="BLACK" strokeType="INSIDE" width="542.0" StackPane.alignment="BOTTOM_CENTER">
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#222020" />
+                                                      <Stop color="#1b1a1a" offset="0.034482758620689655" />
+                                                      <Stop color="#9610c6" offset="0.6743295019157086" />
+                                                      <Stop color="#9610c6" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="projeto de Poo - aluno: Lucas Barros Pelinca da Costa " StackPane.alignment="BOTTOM_CENTER">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="15.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="stkbusca_s" prefHeight="150.0" prefWidth="200.0" visible="false" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0" />
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="busca realizada com sucesso!!!" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="18.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Button fx:id="voltarbusc_s" mnemonicParsing="false" onAction="#voltarbusca_sistema" text="voltar" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <TableView fx:id="tabv_s" maxHeight="150.0" maxWidth="170.0" minHeight="150.0" prefHeight="150.0" prefWidth="385.0" StackPane.alignment="CENTER_LEFT">
+                                             <columns>
+                                                <TableColumn fx:id="tabc_cod_s1" prefWidth="91.0" text="codigo_sistema" />
+                                                <TableColumn fx:id="tabc_nome_adm_s1" prefWidth="70.0" text="nome_adm" />
+                                             </columns>
+                                             <StackPane.margin>
+                                                <Insets bottom="50.0" right="30.0" />
+                                             </StackPane.margin>
+                                          </TableView>
+                                          <TableView fx:id="tabv_ps1" maxHeight="150.0" maxWidth="315.0" prefHeight="150.0" prefWidth="200.0" StackPane.alignment="CENTER_RIGHT">
+                                            <columns>
+                                                <TableColumn fx:id="tabc_cod_ps1" prefWidth="73.0" text="codigo_plat" />
+                                                <TableColumn fx:id="tabc_nome_ps1" prefWidth="70.0" text="nome_plat" />
+                                                <TableColumn fx:id="tabc_assinantes_ps1" prefWidth="78.0" text="assinantes" />
+                                                <TableColumn fx:id="tabc_n_animes_ps1" prefWidth="92.0" text="n_animes" />
+                                            </columns>
+                                             <StackPane.margin>
+                                                <Insets bottom="50.0" right="40.0" />
+                                             </StackPane.margin>
+                                          </TableView>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="relatorio_manga2" onSelectionChanged="#relatorio_sistema_apagar" text="relatorio">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane prefHeight="400.0" prefWidth="542.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="99.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="251.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="BLACK" strokeType="INSIDE" width="542.0" StackPane.alignment="TOP_CENTER">
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#171717" />
+                                                      <Stop color="#282828" offset="0.06896551724137931" />
+                                                      <Stop color="#9610c6" offset="0.436781609195402" />
+                                                      <Stop color="#9610c6" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="Relatorio" StackPane.alignment="TOP_CENTER">
+                                             <StackPane.margin>
+                                                <Insets top="30.0" />
+                                             </StackPane.margin>
+                                             <font>
+                                                <Font name="System Bold Italic" size="36.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="stkrelatorio_s2" prefHeight="150.0" prefWidth="200.0" visible="false" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0" />
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="relatorio de mangá:" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="10.0" top="5.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TableView fx:id="tabv_s1" maxHeight="400.0" maxWidth="170.0" prefHeight="50.0" prefWidth="385.0" StackPane.alignment="TOP_CENTER">
+                                             <columns>
+                                                <TableColumn fx:id="tabc_cod_s2" prefWidth="91.0" text="codigo_sistema" />
+                                                <TableColumn fx:id="tabc_nome_adm_s" prefWidth="70.0" text="nome_adm" />
+                                             </columns>
+                                             <StackPane.margin>
+                                                <Insets top="30.0" />
+                                             </StackPane.margin>
+                                          </TableView>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="50.0" stroke="BLACK" strokeType="INSIDE" width="542.0" StackPane.alignment="BOTTOM_CENTER">
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#222020" />
+                                                      <Stop color="#1b1a1a" offset="0.034482758620689655" />
+                                                      <Stop color="#9610c6" offset="0.6743295019157086" />
+                                                      <Stop color="#9610c6" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="projeto de Poo - aluno: Lucas Barros Pelinca da Costa " StackPane.alignment="BOTTOM_CENTER">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="15.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="stkrelatorio_s1" prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0" />
+                                          <ImageView fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="BOTTOM_LEFT">
+                                             <image>
+                                                <Image url="@../../../../../Downloads/luffy.png" />
+                                             </image>
+                                             <StackPane.margin>
+                                                <Insets left="50.0" />
+                                             </StackPane.margin>
+                                          </ImageView>
+                                          <Button fx:id="bntrelatorio_s" mnemonicParsing="false" onAction="#relatorio_sistema" text="atualizar relatório" textFill="#ff5b09" StackPane.alignment="CENTER_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="cadastrar_sup1" text="cadastrar supervisão">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="340.0" prefWidth="593.0">
+                           <children>
+                              <GridPane prefHeight="400.0" prefWidth="542.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="99.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="251.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="BLACK" strokeType="INSIDE" width="542.0" StackPane.alignment="TOP_CENTER">
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#171717" />
+                                                      <Stop color="#282828" offset="0.06896551724137931" />
+                                                      <Stop color="#9610c6" offset="0.436781609195402" />
+                                                      <Stop color="#9610c6" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro" StackPane.alignment="TOP_CENTER">
+                                             <StackPane.margin>
+                                                <Insets top="30.0" />
+                                             </StackPane.margin>
+                                             <font>
+                                                <Font name="System Bold Italic" size="36.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="stkcadastro_sup" prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0">
+                                             <StackPane.margin>
+                                                <Insets />
+                                             </StackPane.margin>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="digite:" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="10.0" top="5.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="código da supervisão" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" top="20.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="tfcad_cod_supervisão" maxWidth="150.0" StackPane.alignment="TOP_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="55.0" top="40.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <Text fx:id="errocad_sup" fill="#ff700b" strokeType="OUTSIDE" strokeWidth="0.0" text="error" visible="false" wrappingWidth="83.8984375" StackPane.alignment="TOP_RIGHT">
+                                             <StackPane.margin>
+                                                <Insets right="50.0" top="70.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="codigo da plataforma" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" top="70.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="tfcad_cod_platsup" maxWidth="150.0" StackPane.alignment="TOP_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="55.0" top="90.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="codigo de sistema" StackPane.alignment="CENTER_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="25.0" left="20.0" top="20.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <TextField fx:id="tfcad_cod_sissup" maxWidth="150.0" StackPane.alignment="CENTER_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="55.0" top="35.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../../Downloads/goku.png" />
+                                             </image>
+                                             <StackPane.margin>
+                                                <Insets bottom="40.0" left="80.0" />
+                                             </StackPane.margin>
+                                          </ImageView>
+                                          <Button fx:id="bntfimcad_supv1" mnemonicParsing="false" onAction="#cadastro_supervisão" text="finalizar cadastro" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="50.0" stroke="BLACK" strokeType="INSIDE" width="542.0" StackPane.alignment="BOTTOM_CENTER">
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#222020" />
+                                                      <Stop color="#1b1a1a" offset="0.034482758620689655" />
+                                                      <Stop color="#9610c6" offset="0.6743295019157086" />
+                                                      <Stop color="#9610c6" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                          </Rectangle>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="projeto de Poo - aluno: Lucas Barros Pelinca da Costa " StackPane.alignment="BOTTOM_CENTER">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="15.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="stkcadastro_sup2" prefHeight="150.0" prefWidth="200.0" visible="false" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070808d0" height="250.0" stroke="#000000da" strokeType="INSIDE" width="542.0" />
+                                          <ImageView fitHeight="250.0" fitWidth="250.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" StackPane.alignment="BOTTOM_LEFT">
+                                             <image>
+                                                <Image url="@../../../../../Downloads/vegetto%20chibi.png" />
+                                             </image>
+                                             <StackPane.margin>
+                                                <Insets left="100.0" />
+                                             </StackPane.margin>
+                                          </ImageView>
+                                          <Text fill="#f55207" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro realizado com sucesso!!!" StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="18.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="20.0" />
+                                             </StackPane.margin>
+                                          </Text>
+                                          <Button fx:id="bntoutrocadastro_sup" mnemonicParsing="false" onAction="#outro_cadastro_supervisão" text="fazer outro cadastro" textFill="#ff5b09" StackPane.alignment="BOTTOM_RIGHT">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" right="20.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>
